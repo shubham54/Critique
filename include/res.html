@@ -1,0 +1,46 @@
+<br> <br>
+<div ng-if="details.Response==='True'">
+<main class="main-content">
+				<div class="container">
+					<div class="page">
+						<div class="content">
+							<div class="row">
+								<div class="col-md-6">
+									<figure class="movie-poster"><img ng-src="{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}" class="thumbnail animated flip movie-poster"></figure>
+								</div>
+								<div class="col-md-6">
+									<h2 class="movie-title" style="text-align:left;">{{ details.Title }}</h2>
+									<div class="movie-summary" style="text-align:left;">
+										<p>{{ details.Plot=='N/A' ? ' ': details.Plot}}</p>
+									</div>
+									<ul class="movie-meta" style="text-align:left;">
+										<li ><strong>IMDB Rating: {{ details.imdbRating}}</strong> 
+										</li>
+										<li><strong>Tomatometer: {{ details.tomatoRating}}</strong> 
+										</li>
+										<li><strong>Metascore:</strong>{{ details.Metascore }}</li>
+										<li><strong>Length:</strong>{{ details.Runtime }}</li>
+										<li><strong>Premiere:</strong> {{ details.Released }}</li>
+										<li><strong>Category:</strong>{{ details.Genre }}</li>
+									</ul>
+
+									<ul class="starring" style="text-align:left;">
+										<li><strong>Directors:</strong>{{ details.Director }}</li>
+										<li><strong>Writers:</strong>{{ details.Writer }}</li>
+										<li><strong>Stars:</strong>{{ details.Actors }}</li>
+										<li><strong>Awards:</strong>{{ details.Awards}}</li>
+									</ul>
+								</div>
+							</div> <!-- .row -->
+							<br>
+							<div class="entry-content" style="text-align:left;">
+								<p>{{ details.tomatoConsensus=='N/A' ? ' ': details.tomatoConsensus}}</p>
+							</div>
+						</div>
+					</div>
+				</div> <!-- .container -->
+			</main>
+</div>
+<div ng-if="details.Response==='False'">
+  No results found.
+</div>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app='critique'>
+  <head>
+    <meta charset="UTF-8">
+    <title>Critique</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body  ng-controller='searchCtrl'>
+<div><h1 ng-if='!details'>SEARCH MOVIE</h1></div>
+  <div class="container">
+  <div class="row">
+      <div id="custom-search-input">
+            <div class="input-group col-md-4" style="margin-left:400px; margin-top:10px;">
+                <p style="font-size: 150%;"> Critique</p>
+                <form ng-submit='getmovie()'>
+                  <input type="text" class="  search-query form-control" placeholder="Search" ng-model='search'/>
+                </form>
+            </div>
+      </div>
+  </div>
+</div>
+
+    <div id="main-info" ng-include="'include/res.html'" class="col-md-8"></div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="js/prefixfree.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/app.js"></script>
+  </body>
+</html>
